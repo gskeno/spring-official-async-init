@@ -30,14 +30,24 @@ public class SpringConfig {
 //        return new B();
 //    }
 
+//    @Bean(bootstrap = Bean.Bootstrap.BACKGROUND, initMethod = "init")
+//    public C c(D d) throws InterruptedException {
+//        return new C(d);
+//    }
+//
+//    @Bean(bootstrap = Bean.Bootstrap.BACKGROUND)
+//    public D d() throws InterruptedException {
+//        return new D();
+//    }
+
     @Bean(bootstrap = Bean.Bootstrap.BACKGROUND, initMethod = "init")
-    public C c(D d) throws InterruptedException {
-        return new C(d);
+    public E e() throws InterruptedException {
+        return new E();
     }
 
-    @Bean(bootstrap = Bean.Bootstrap.BACKGROUND)
-    public D d() throws InterruptedException {
-        return new D();
+    @Bean(bootstrap = Bean.Bootstrap.BACKGROUND, initMethod = "init")
+    public F f() throws InterruptedException {
+        return new F();
     }
 
 
