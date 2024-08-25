@@ -9,17 +9,14 @@ import java.util.concurrent.TimeUnit;
 public class E {
     @Autowired
     private F f;
-
-    public E() throws InterruptedException
-    {
+    public E() throws InterruptedException {
         TimeUnit.SECONDS.sleep(3);
-        log.info("E 构造器耗时3s, {}", Thread.currentThread().getName());
+        log.info("E 构造器耗时3s, {}",
+                Thread.currentThread().getName());
     }
-
-    public void init()
-    {
-        log.info("E init执行{}", Thread.currentThread().getName());
-        // f.custom();
+    public void init() {
+        log.info("E init执行, {}",
+                Thread.currentThread().getName());
+        f.custom();
     }
-
 }

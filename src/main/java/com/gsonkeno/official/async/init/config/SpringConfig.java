@@ -40,12 +40,14 @@ public class SpringConfig {
 //        return new D();
 //    }
 
-    @Bean(bootstrap = Bean.Bootstrap.BACKGROUND, initMethod = "init")
+    @Bean(bootstrap = Bean.Bootstrap.BACKGROUND,
+            initMethod = "init")
     public E e() throws InterruptedException {
         return new E();
     }
 
-    @Bean(bootstrap = Bean.Bootstrap.BACKGROUND, initMethod = "init")
+    @Bean(bootstrap = Bean.Bootstrap.BACKGROUND,
+            initMethod = "init")
     public F f() throws InterruptedException {
         return new F();
     }
